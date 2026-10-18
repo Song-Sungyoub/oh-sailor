@@ -4,7 +4,7 @@
                 echo '<script>location.href="/login";</script>';
         }else{
             $num = $_GET['num'];
-            $connect = mysqli_connect('localhost', 'dbadmin', 'tooringa', 'ohsailor') or die ("connect fail");
+            require __DIR__ . '/../../database.php';
             $query = "select * from evaluation_board where num =$num";
             $result = $connect->query($query);
             $rows = mysqli_fetch_assoc($result);

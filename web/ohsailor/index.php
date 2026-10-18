@@ -3,7 +3,7 @@
         if(!$_SESSION['userid']){
                 echo '<script>location.href="/login";</script>';
         }else{
-            $connect = mysqli_connect('localhost', 'dbadmin', 'tooringa', 'ohsailor') or die ("connect fail");
+            require __DIR__ . '/../database.php';
 ?>
 <!DOCTYPE html>
 <html lang="ko">
